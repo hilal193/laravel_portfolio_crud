@@ -15,7 +15,8 @@
         </li>
         <li>
             {{-- <a href="{{route('portfolio.create')}}"> --}}
-            <a href="#">
+                <a href="{{route('skills.create')}}">
+
 
                 <i class="fa fa-tachometer" aria-hidden="true"></i> skills -form
             </a>
@@ -31,9 +32,8 @@
         </li>
         <li>
             {{-- <a href="{{route('portfolio.affichage')}}"> --}}
-            <a href="#">
-
-                <i class="fa fa-tachometer" aria-hidden="true"></i> Portfolio
+            <a href="{{route('skills.index')}}">
+                <i class="fa fa-tachometer" aria-hidden="true"></i> Skills page
             </a>
         </li>
         <li class="header">Another Menu</li>

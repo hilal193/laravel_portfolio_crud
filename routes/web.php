@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\WorksController;
+use App\Http\Controllers\SkillsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,24 +35,34 @@ Route::get('/admin/dashboard', [FrontController::class,"dashboard"])->name('dash
 // WORKS - mes projets
 // create
 Route::get('/admin/works/create', [WorksController::class,"create"])->name('works.create');
-
 // store
 Route::post('/admin/works/store', [WorksController::class,"store"])->name('works.store');
-
 // affichage
 Route::get('/admin/works/index', [WorksController::class,"index"])->name('works.index');
-
 // Delete
 Route::delete('/works/{id}/deleteworks', [WorksController::class,"destroy"])->name("works.destroy");
-
 // show
 Route::get('/works/{works}/showworks', [WorksController::class,"show"])->name("works.show");
-
 // edit
 Route::get('/works/{works}/edit', [WorksController::class,"edit"])->name("works.edit");
-
 // update
 Route::put('/works/{works}/update', [WorksController::class,"update"])->name("works.update");
+
+// Skills
+// create
+Route::get('/admin/skills/create', [SkillsController::class,"create"])->name('skills.create');
+// store
+Route::post('/admin/skills/store', [SkillsController::class,"store"])->name('skills.store');
+// affichage
+Route::get('/admin/skills/index', [SkillsController::class,"index"])->name('skills.index');
+// Delete
+Route::delete('/skills/{id}/deleteskills', [SkillsController::class,"destroy"])->name("skills.destroy");
+// show
+Route::get('/skills/{skills}/showskills', [SkillsController::class,"show"])->name("skills.show");
+// edit
+Route::get('/skills/{skills}/edit', [SkillsController::class,"edit"])->name("skills.edit");
+// update
+Route::put('/skills/{skills}/update', [SkillsController::class,"update"])->name("skills.update");
 
 
 
