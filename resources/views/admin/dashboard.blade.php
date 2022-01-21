@@ -8,16 +8,16 @@
     <ul class="sidebar-navigation">
         <li class="header">Create Formulaire</li>
         <li>
-            {{-- <a href="{{route('blog.create')}}"> --}}
-            <a href="#">
-                <i class="fa fa-home" aria-hidden="true"></i> Blog -form
+            <a href="{{route('works.create')}}">
+            {{-- <a href="#"> --}}
+                <i class="fa fa-home" aria-hidden="true"></i> Works -form
             </a>
         </li>
         <li>
             {{-- <a href="{{route('portfolio.create')}}"> --}}
             <a href="#">
 
-                <i class="fa fa-tachometer" aria-hidden="true"></i> Portfolio -form
+                <i class="fa fa-tachometer" aria-hidden="true"></i> skills -form
             </a>
         </li>
 
@@ -25,10 +25,8 @@
     <ul class="sidebar-navigation">
         <li class="header">Affichage</li>
         <li>
-            {{-- <a href="{{route('blog.affichage')}}"> --}}
-            <a href="#">
-
-                <i class="fa fa-home" aria-hidden="true"></i> Blog
+            <a href="{{route('works.index')}}">
+                <i class="fa fa-home" aria-hidden="true"></i> Works - Projet
             </a>
         </li>
         <li>
@@ -56,6 +54,8 @@
         </li>
     </ul>
 </div>
+
+
 
 
 @endsection

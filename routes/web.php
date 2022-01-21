@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\WorksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +31,19 @@ Route::get('/works', [FrontController::class,"works"])->name('works');
 // admin
 Route::get('/admin/dashboard', [FrontController::class,"dashboard"])->name('dashboard');
 
+// WORKS - mes projets
+// create
+Route::get('/admin/works/create', [WorksController::class,"create"])->name('works.create');
 
 // store
-Route::post('/admin/works/store', [PortfolioController::class,"store"])->name('works.store');
+Route::post('/admin/works/store', [WorksController::class,"store"])->name('works.store');
+
+// affichage
+Route::get('/admin/works/index', [WorksController::class,"index"])->name('works.index');
+
+// Delete
+Route::delete('/works/{id}/deleteworks', [WorksController::class,"destroy"])->name("works.destroy");
+
+
 
 
