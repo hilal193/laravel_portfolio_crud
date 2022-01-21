@@ -82,9 +82,10 @@
                     <thead>
                         <tr class="table-info">
                             <th>#id</th>
-                              <th>TITRE</th>
-                              <th>DESCRIPTION</th>
-                              <th>NIVEAU</th>
+                              <th>NOM</th>
+                              <th>IMAGE</th>
+                              {{-- <th>DESCRIPTION</th>
+                              <th>NIVEAU</th> --}}
                               <th>action</th>
                         </tr>
                     </thead>
@@ -93,8 +94,11 @@
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->nom }}</td>
-                            <td>{{ $item->description }}</td>
-                            <td>{{ $item->niveau }}</td>
+                            {{-- <td>{{ $item->image }}</td> --}}
+                            <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
+
+                            {{-- <td>{{ $item->description }}</td>
+                            <td>{{ $item->niveau }}</td> --}}
 
                              <td class="df">
                             <a href="{{route('skills.show', $item->id)}}" class="btn btn vert">Show</a>

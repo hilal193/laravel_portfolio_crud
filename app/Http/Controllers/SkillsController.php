@@ -20,8 +20,9 @@ class SkillsController extends Controller
     {
         $skills = new Skill();
         $skills->nom = $request->nom;
-        $skills->description = $request->description;
-        $skills->niveau = $request->niveau;
+        $skills->image = $request->image;
+        // $skills->description = $request->description;
+        // $skills->niveau = $request->niveau;
         $skills->save();
         return redirect()->route("skills.index");
         // return redirect()->back();
@@ -48,8 +49,9 @@ class SkillsController extends Controller
         // dump($skills);
         // dd($request);
         $skills -> nom = $request->nom;
-        $skills -> description = $request->description;
-        $skills -> niveau = $request->niveau;
+        $skills->image = $request->image;
+        // $skills -> description = $request->description;
+        // $skills -> niveau = $request->niveau;
         $skills -> save();
         return redirect()->back();
     }

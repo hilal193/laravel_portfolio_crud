@@ -9,13 +9,17 @@
         <input type="text" name="nom" class="form-control">
     </div>
     <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input type="text" name="image" class="form-control">
+    </div>
+    {{-- <div class="mb-3">
         <label  class="form-label">Description</label>
         <input type="text" value=""  name="description" class="form-control" >
     </div>
     <div class="mb-3">
         <label  class="form-label">Niveau</label>
         <input type="text" value=""  name="niveau" class="form-control" >
-    </div>
+    </div> --}}
     <button type="submit" class="btn btn-primary vert">Submit</button>
 </form>
 @endsection

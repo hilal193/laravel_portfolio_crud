@@ -12,13 +12,17 @@
         <input type="text" value="{{ $skills->nom }}" name="nom" class="form-control">
     </div>
     <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input type="text" value="{{ $skills->image }}" name="image" class="form-control">
+    </div>
+    {{-- <div class="mb-3">
         <label  class="form-label">Description</label>
         <input type="text" value="{{ $skills->description }}" name="description" class="form-control" >
     </div>
     <div class="mb-3">
         <label  class="form-label">Niveau</label>
         <input type="text" value="{{ $skills->niveau }}" name="niveau" class="form-control" >
-    </div>
+    </div> --}}
     {{-- <butto class="btn btn-primary">Submit</button> --}}
     <button type="submit" class="btn btn vert">CONFIRM</button>
     <a href="{{route("skills.index")}}" class="btn btn vert">BACK</a>

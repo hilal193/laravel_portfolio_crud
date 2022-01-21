@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                         <div class="page-title text-center">
-                            <h2>About <span class="primary">me</span> <span class="title-bg">Name</span></h2>
+                            <h2>My <span class="primary">skills</span> <span class="title-bg">Hilal</span></h2>
                             <p>I am working as a professional UI/UX Designer since 2007. Worked in more than 200 live projects and also with more than 120 different clients!</p>
                         </div>
                     </div>
@@ -22,11 +22,13 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="about-author">
                             <figure class="author-thumb">
-                                <img src="img/author.jpg" alt="">
+                                <img src="https://us.123rf.com/450wm/tony4urban/tony4urban1302/tony4urban130200001/17746154-homme-de-tr%C3%A8s-grande-taille-sans-illustration-visage.jpg?ver=6" alt="">
+                                {{-- <img src="img/author.jpg" alt=""> --}}
+
                             </figure> <!-- /.author-bio -->
                             <div class="author-desc">
-                                <p><b>Date of birth:</b> 29th july, 1984</p>
-                                <p><b>Language:</b> English, Spanish</p>
+                                <p><b>Date of birth:</b> 26th June, 1993</p>
+                                <p><b>Language:</b> English, Dutch, French</p>
                                 <p><b>Expert in:</b> UI/UX, Web development</p>
                                 <p><b>Freelance:</b> Available</p>
                             </div>
@@ -39,11 +41,28 @@
                         <div class="section-title clear">
                             <h3>Skills</h3>
                         </div>
+                        @forelse ($skill as $item)
+                        <div class="skill-wrapper">
+                            <div class="progress clear">
+                                <div class="skill-name">{{ $item->nom }}</div>
+                                <div class="">
+                                {{-- <div class="skill-bar"> --}}
+                                    <div class="bar"></div>
+                                    <img src={{ $item->image }} alt="" style="width: 150px; height: 150px; margin-left: 35%">
+                                    {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/640px-PHP-logo.svg.png" alt="" style="width: 50px; height: 50px; margin-left: 35%"> --}}
+                                </div>
+                                <div class="skill-lavel" data-skill-value="90%"></div>
+                            </div> <!-- /.progress -->
+
+                        </div> <!-- /.skill-wrapper -->
+                        @empty
+
                         <div class="skill-wrapper">
                             <div class="progress clear">
                                 <div class="skill-name">Photoshop</div>
                                 <div class="skill-bar">
                                     <div class="bar"></div>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/640px-PHP-logo.svg.png" alt="" style="width: 50px; height: 50px; margin-left: 35%">
                                 </div>
                                 <div class="skill-lavel" data-skill-value="90%"></div>
                             </div> <!-- /.progress -->
@@ -83,6 +102,7 @@
                                 <div class="skill-lavel" data-skill-value="75%"></div>
                             </div> <!-- /.progress -->
                         </div> <!-- /.skill-wrapper -->
+                        @endforelse
                     </div> <!-- /.col -->
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
