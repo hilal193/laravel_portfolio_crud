@@ -37,4 +37,24 @@ class WorksController extends Controller
         $id->delete();
         return redirect()->back();
     }
+
+    public function show(Projet $works)
+    {
+        return view("admin.works.show",compact("works"));
+        // dd($works);
+    }
+    public function edit(Projet $works)
+    {
+        return view("admin.works.edit",compact("works"));
+    }
+    public function update(Projet $works, Request $request)
+    {
+        // dump($works);
+        // dd($request);
+        $works -> titre = $request->titre;
+        $works -> image = $request->image;
+        $works -> description = $request->description;
+        $works -> save();
+        return redirect()->back();
+    }
 }

@@ -44,6 +44,18 @@ Route::get('/admin/works/index', [WorksController::class,"index"])->name('works.
 // Delete
 Route::delete('/works/{id}/deleteworks', [WorksController::class,"destroy"])->name("works.destroy");
 
+// show
+Route::get('/works/{works}/showworks', [WorksController::class,"show"])->name("works.show");
+
+// edit
+Route::get('/works/{works}/edit', [WorksController::class,"edit"])->name("works.edit");
+
+// update
+Route::put('/works/{works}/update', [WorksController::class,"update"])->name("works.update");
+
+
+
+
 
 
 

@@ -62,6 +62,8 @@
     <h2 class="sub-header">Dashboard</h2>
               {{-- blog --}}
               <h3>Mes projets - Works :</h3>
+              <p> ADD Project :  <a href="{{route('works.create')}}" class="btn btn vert pt-1 m-1">+ADD</a>
+              </p>
               <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -82,9 +84,9 @@
                             <td>{{ $item->description }}</td>
 
                              <td class="df">
-                            {{-- <a href="{{route('blog.show', $item->id)}}" class="btn btn vert">Show</a> --}}
-                            {{-- <a href="{{route('blog.edit', $item->id)}}" class="btn btn orange edit">Edit</a> --}}
-                            <form action="{{ route("works.destroy", $item->id) }}" method="POST"> 
+                            <a href="{{route('works.show', $item->id)}}" class="btn btn vert">Show</a>
+                            <a href="{{route('works.edit', $item->id)}}" class="btn btn orange edit">Edit</a>
+                            <form action="{{ route("works.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method('DELETE')
                                 <button type="submit" class="btn rouge">Delete</button>

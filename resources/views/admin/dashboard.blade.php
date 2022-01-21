@@ -56,8 +56,13 @@
 </div>
 
 
+<div class="content-container">
 
 
+
+    <h2 class="sub-header">Dashboard</h2>
+              <h3>COMING SOON...</h3>
+  </div>
 @endsection
 
 
