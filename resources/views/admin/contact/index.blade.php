@@ -11,8 +11,8 @@
     <ul class="sidebar-navigation">
       <li class="header">Create Formulaire</li>
       <li>
-        <a href="{{route('skills.create')}}">
-            <i class="fa fa-home" aria-hidden="true"></i> Skills -form
+        <a href="{{route('contact.create')}}">
+            <i class="fa fa-home" aria-hidden="true"></i> Contact -form
         </a>
     </li>
     <li>
@@ -30,15 +30,15 @@
             </a>
         </li>
         <li>
-            <a href="{{route('about.index')}}">
+            <a href="{{route('skills.index')}}">
                 {{-- <a href="#"> --}}
-              <i class="fa fa-tachometer" aria-hidden="true"></i> About
+              <i class="fa fa-tachometer" aria-hidden="true"></i> Mes Skills
             </a>
         </li>
         <li>
-            <a href="{{route('contact.index')}}">
+            <a href="{{route('about.index')}}">
                 {{-- <a href="#"> --}}
-              <i class="fa fa-tachometer" aria-hidden="true"></i> Contact
+              <i class="fa fa-tachometer" aria-hidden="true"></i> ABOUT
             </a>
         </li>
         <li>
@@ -73,33 +73,34 @@
     {{-- table --}}
 
     <h2 class="sub-header">Dashboard</h2>
-              {{-- blog --}}
-              <h3>Mes projets - Skills :</h3>
-              <p> ADD Project :  <a href="{{route('skills.create')}}" class="btn btn vert pt-1 m-1">+ADD</a>
+              <h3>Contact :</h3>
+              <p> ADD Project :  <a href="{{route('contact.create')}}" class="btn btn vert pt-1 m-1">+ADD</a>
               </p>
               <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr class="table-info">
                             <th>#id</th>
+                              <th>NOM</th>
+                              <th>EMAIL</th>
                               <th>TITRE</th>
                               <th>DESCRIPTION</th>
-                              <th>NIVEAU</th>
                               <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($afficheSkills as $item)
+                        @forelse ($afficheContact as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->nom }}</td>
+                            <td>{{ $item->email }}</td>
+                            <td>{{ $item->titre }}</td>
                             <td>{{ $item->description }}</td>
-                            <td>{{ $item->niveau }}</td>
 
                              <td class="df">
-                            <a href="{{route('skills.show', $item->id)}}" class="btn btn vert">Show</a>
-                            <a href="{{route('skills.edit', $item->id)}}" class="btn btn orange edit">Edit</a>
-                            <form action="{{ route("skills.destroy", $item->id) }}" method="POST">
+                            <a href="{{route('contact.show', $item->id)}}" class="btn btn vert">Show</a>
+                            <a href="{{route('contact.edit', $item->id)}}" class="btn btn orange edit">Edit</a>
+                            <form action="{{ route("contact.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method('DELETE')
                                 <button type="submit" class="btn rouge">Delete</button>

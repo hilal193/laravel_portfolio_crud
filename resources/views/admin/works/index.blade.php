@@ -29,6 +29,18 @@
             </a>
         </li>
         <li>
+            <a href="{{route('about.index')}}">
+                {{-- <a href="#"> --}}
+              <i class="fa fa-tachometer" aria-hidden="true"></i> About
+            </a>
+        </li>
+        <li>
+            <a href="{{route('contact.index')}}">
+                {{-- <a href="#"> --}}
+              <i class="fa fa-tachometer" aria-hidden="true"></i> Contact
+            </a>
+        </li>
+        <li>
             <a href="{{route('dashboard')}}">
                 <i class="fa fa-home" aria-hidden="true"></i> Dashboard
             </a>

@@ -11,15 +11,15 @@
     <ul class="sidebar-navigation">
       <li class="header">Create Formulaire</li>
       <li>
-        <a href="{{route('skills.create')}}">
-            <i class="fa fa-home" aria-hidden="true"></i> Skills -form
-        </a>
-    </li>
-    <li>
         <a href="{{route('works.create')}}">
             <i class="fa fa-home" aria-hidden="true"></i> Works -form
         </a>
     </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-tachometer" aria-hidden="true"></i> Portfolio -form
+        </a>
+      </li>
     </ul>
     <ul class="sidebar-navigation">
         <li class="header">Affichage</li>
@@ -41,6 +41,7 @@
               <i class="fa fa-tachometer" aria-hidden="true"></i> Contact
             </a>
         </li>
+
         <li>
             <a href="{{route('dashboard')}}">
                 <i class="fa fa-home" aria-hidden="true"></i> Dashboard
@@ -74,8 +75,8 @@
 
     <h2 class="sub-header">Dashboard</h2>
               {{-- blog --}}
-              <h3>Mes projets - Skills :</h3>
-              <p> ADD Project :  <a href="{{route('skills.create')}}" class="btn btn vert pt-1 m-1">+ADD</a>
+              <h3>Mes projets - ABOUT :</h3>
+              <p> ADD Project :  <a href="{{route('about.create')}}" class="btn btn vert pt-1 m-1">+ADD</a>
               </p>
               <div class="table-responsive">
                 <table class="table table-striped">
@@ -83,26 +84,27 @@
                         <tr class="table-info">
                             <th>#id</th>
                               <th>TITRE</th>
+                              <th>IMAGE</th>
                               <th>DESCRIPTION</th>
-                              <th>NIVEAU</th>
                               <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($afficheSkills as $item)
+                        @forelse ($afficheAbout as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
-                            <td>{{ $item->nom }}</td>
+                            <td>{{ $item->titre }}</td>
+                            <td><img src="{{ $item->image }}" style="height:50px; width:50px;" alt=""></td>
                             <td>{{ $item->description }}</td>
-                            <td>{{ $item->niveau }}</td>
 
                              <td class="df">
-                            <a href="{{route('skills.show', $item->id)}}" class="btn btn vert">Show</a>
-                            <a href="{{route('skills.edit', $item->id)}}" class="btn btn orange edit">Edit</a>
-                            <form action="{{ route("skills.destroy", $item->id) }}" method="POST">
+                            <a href="{{route('about.show', $item->id)}}" class="btn btn vert">Show</a>
+                            <a href="{{route('about.edit', $item->id)}}" class="btn btn orange edit">Edit</a>
+                            <form action="{{ route("about.destroy", $item->id) }}" method="POST">
                                 @csrf
                             @method('DELETE')
                                 <button type="submit" class="btn rouge">Delete</button>
+                                {{-- <button type="submit" class="btn rouge">Show</button> --}}
 
                             </td>
                             </form>

@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\WorksController;
 use App\Http\Controllers\SkillsController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +66,39 @@ Route::get('/skills/{skills}/edit', [SkillsController::class,"edit"])->name("ski
 // update
 Route::put('/skills/{skills}/update', [SkillsController::class,"update"])->name("skills.update");
 
+
+// About
+// create
+Route::get('/admin/about/create', [AboutController::class,"create"])->name('about.create');
+// store
+Route::post('/admin/about/store', [AboutController::class,"store"])->name('about.store');
+// affichage
+Route::get('/admin/about/index', [AboutController::class,"index"])->name('about.index');
+// Delete
+Route::delete('/about/{id}/deleteabout', [AboutController::class,"destroy"])->name("about.destroy");
+// show
+Route::get('/about/{about}/showsabout', [AboutController::class,"show"])->name("about.show");
+// edit
+Route::get('/about/{about}/edit', [AboutController::class,"edit"])->name("about.edit");
+// update
+Route::put('/about/{about}/update', [AboutController::class,"update"])->name("about.update");
+
+
+// Contact
+// create
+Route::get('/admin/contact/create', [ContactController::class,"create"])->name('contact.create');
+// store
+Route::post('/admin/contact/store', [ContactController::class,"store"])->name('contact.store');
+// affichage
+Route::get('/admin/contact/index', [ContactController::class,"index"])->name('contact.index');
+// Delete
+Route::delete('/contact/{id}/deletecontact', [ContactController::class,"destroy"])->name("contact.destroy");
+// show
+Route::get('/contact/{contact}/showscontact', [ContactController::class,"show"])->name("contact.show");
+// edit
+Route::get('/contact/{contact}/edit', [ContactController::class,"edit"])->name("contact.edit");
+// update
+Route::put('/contact/{contact}/update', [ContactController::class,"update"])->name("contact.update");
 
 
 

@@ -25,7 +25,6 @@ class WorksController extends Controller
         $projet->save();
         return redirect()->route("works.index");
         // return redirect()->back();
-
     }
     // public function affichage()
     //     {

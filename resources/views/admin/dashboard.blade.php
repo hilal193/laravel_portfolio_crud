@@ -36,6 +36,18 @@
                 <i class="fa fa-tachometer" aria-hidden="true"></i> Skills page
             </a>
         </li>
+        <li>
+            {{-- <a href="{{route('portfolio.affichage')}}"> --}}
+            <a href="{{route('about.index')}}">
+                <i class="fa fa-tachometer" aria-hidden="true"></i> About page
+            </a>
+        </li>
+        <li>
+            {{-- <a href="{{route('portfolio.affichage')}}"> --}}
+            <a href="{{route('contact.index')}}">
+                <i class="fa fa-tachometer" aria-hidden="true"></i> CONTACT page
+            </a>
+        </li>
         <li class="header">Another Menu</li>
         <li>
             <a href="#">
