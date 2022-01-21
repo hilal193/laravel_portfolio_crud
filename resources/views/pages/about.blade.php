@@ -11,13 +11,22 @@
             <a href="{{ route("home") }}" class="page-close"><i class="tf-ion-close"></i></a>
             {{-- <a href="./" class="page-close"><i class="tf-ion-close"></i></a> --}}
             <!-- /.close -->
+            @forelse ($about as $item)
 
             <div class="author-image-large">
-                <img src={{ asset("img/author.png") }} alt="">
+                {{-- <img src={{ asset("img/author.png") }} alt=""> --}}
+                <img src={{$item->image }} alt="">
             </div>
 
             <div class="container">
                 <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-7">
+                        <div class="page-title text-center">
+                            <h2>About <span class="primary">me</span> <span class="title-bg">{{ $item->titre }}</span></h2>
+                            <p>{{ $item->description }}</p>
+                        </div>
+                    </div>
+                    @empty
                     {{-- <div class="col-xs-12 col-md-6 col-lg-7">
                         <div class="page-title">
                             <h2>David <span class="primary">ramon</span> <span class="title-bg">About</span></h2>
@@ -31,6 +40,8 @@
                             <p>I am working as a professional UI/UX Designer since 2007. Worked in more than 200 live projects and also with more than 120 different clients!</p>
                         </div>
                     </div>
+
+                    @endforelse
 
 
 

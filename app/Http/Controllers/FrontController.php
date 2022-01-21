@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Contact;
+use App\Models\Projet;
+use App\Models\Skill;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -12,11 +16,13 @@ class FrontController extends Controller
     }
     public function about()
     {
-       return view('pages.about');
+       $about = About::all();
+       return view('pages.about',compact("about"));
     }
     public function contact()
     {
-       return view('pages.contact');
+       $contact = Contact::all();
+       return view('pages.contact',compact("contact"));
     }
     public function resume()
     {
@@ -36,11 +42,13 @@ class FrontController extends Controller
     // }
     public function skills()
     {
-       return view('pages.skills');
+       $skill = Skill::all();
+       return view('pages.skills',compact("skill"));
     }
     public function works()
     {
-       return view('pages.works');
+       $works = Projet::all();
+       return view('pages.works',compact("works"));
     }
     public function dashboard()
     {
