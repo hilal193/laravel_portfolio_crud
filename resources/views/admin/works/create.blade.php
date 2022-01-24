@@ -17,6 +17,10 @@
         <label  class="form-label">Description</label>
         <input type="text" value=""  name="description" class="form-control" >
     </div>
+    <div class="mb-3">
+        <label  class="form-label">Filter</label>
+        <input type="text" value=""  name="filter" class="form-control" >
+    </div>
     <button type="submit" class="btn btn-primary vert">Submit</button>
 </form>
 @endsection

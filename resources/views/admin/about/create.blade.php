@@ -3,6 +3,18 @@
 
 @section('content')
 
+@if ($errors)
+
+@foreach ($errors->all() as $item)
+
+<li style="color: red; text-align: center">
+    {{ $item }}
+</li>
+
+@endforeach
+
+@endif
+{{-- {{ $errors }} --}}
 <form class="m-5" action="{{ route("about.store") }}" method="POST">
     @csrf
     <div class="mb-3">

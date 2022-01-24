@@ -10,7 +10,8 @@ class AboutController extends Controller
     public function index()
     {
         $afficheAbout = About::all();
-        return view("admin.about.index",compact("afficheAbout"));
+        $paginationAbout = About::orderBy("created_at","desc")->paginate(1);
+        return view("admin.about.index",compact("afficheAbout","paginationAbout"));
     }
     public function create()
     {
@@ -18,6 +19,12 @@ class AboutController extends Controller
     }
     public function store(Request $request)
     {
+        request()->validate([
+            "image"=>["required"],
+            "titre"=>["required","min:10"],
+            "description"=>["required"]
+        ]);
+
         $projet = new About();
         $projet->image = $request->image;
         $projet->titre = $request->titre;

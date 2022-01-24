@@ -17,6 +17,7 @@ class CreateProjetsTable extends Migration
             $table->id();
             $table->string("image",200)->nullable();
             $table->string("titre",80);
+            $table->string("filter",80);
             $table->longText("description");
             $table->timestamps();
         });

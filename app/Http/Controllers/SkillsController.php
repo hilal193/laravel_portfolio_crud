@@ -10,7 +10,8 @@ class SkillsController extends Controller
     public function index()
     {
         $afficheSkills = Skill::all();
-        return view("admin.skills.index",compact("afficheSkills"));
+        $paginationSkills = Skill::orderBy("created_at","desc")->paginate(3);
+        return view("admin.skills.index",compact("afficheSkills","paginationSkills"));
     }
     public function create()
     {

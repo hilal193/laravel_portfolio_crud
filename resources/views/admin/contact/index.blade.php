@@ -125,6 +125,9 @@
                         @endforelse
                     </tbody>
                 </table>
+                <div>
+                    {{ $paginationContact->links() }}
+                </div>
             </div>
 
 

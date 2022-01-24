@@ -10,7 +10,8 @@ class WorksController extends Controller
     public function index()
     {
         $afficheWorks = Projet::all();
-        return view("admin.works.index",compact("afficheWorks"));
+        $paginationWorks = Projet::orderBy("created_at","desc")->paginate(3);
+        return view("admin.works.index",compact("afficheWorks","paginationWorks"));
     }
     public function create()
     {
@@ -22,6 +23,7 @@ class WorksController extends Controller
         $projet->image = $request->image;
         $projet->titre = $request->titre;
         $projet->description = $request->description;
+        $projet->filter = $request->filter;
         $projet->save();
         return redirect()->route("works.index");
         // return redirect()->back();
@@ -53,6 +55,7 @@ class WorksController extends Controller
         $works -> titre = $request->titre;
         $works -> image = $request->image;
         $works -> description = $request->description;
+        $works -> filter = $request->filter;
         $works -> save();
         return redirect()->back();
     }

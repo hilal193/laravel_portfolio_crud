@@ -128,6 +128,9 @@
                         @endforelse
                     </tbody>
                 </table>
+                <div>
+                    {{ $paginationSkills->links() }}
+                </div>
             </div>
 
 

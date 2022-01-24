@@ -10,7 +10,8 @@ class ContactController extends Controller
     public function index()
     {
         $afficheContact = Contact::all();
-        return view("admin.contact.index",compact("afficheContact"));
+        $paginationContact = Contact::orderBy("created_at","desc")->paginate(1);
+        return view("admin.contact.index",compact("afficheContact","paginationContact"));
     }
     public function create()
     {
@@ -18,6 +19,12 @@ class ContactController extends Controller
     }
     public function store(Request $request)
     {
+        request()->validate([
+            "nom"=>["required"],
+            "email"=>["required","email","unique:contacts"],
+            "titre"=>["required"],
+            "description"=>["required"]
+        ]);
         $contact = new Contact();
         $contact->nom = $request->nom;
         $contact->email = $request->email;

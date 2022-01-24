@@ -19,6 +19,10 @@
         <label  class="form-label">Description</label>
         <input type="text" value="{{ $works->description }}" name="description" class="form-control" >
     </div>
+    <div class="mb-3">
+        <label  class="form-label">Filter</label>
+        <input type="text" value="{{ $works->filter }}" name="filter" class="form-control" >
+    </div>
     {{-- <butto class="btn btn-primary">Submit</button> --}}
     <button type="submit" class="btn btn vert">CONFIRM</button>
     <a href="{{route("works.index")}}" class="btn btn vert">BACK</a>

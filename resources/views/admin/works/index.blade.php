@@ -124,9 +124,11 @@
                         @endforelse
                     </tbody>
                 </table>
+                <div>
+                    {{ $paginationWorks->links() }}
+                </div>
             </div>
 
-
-  </div>
+        </div>
 
 @endsection

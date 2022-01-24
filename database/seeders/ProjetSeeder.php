@@ -17,9 +17,34 @@ class ProjetSeeder extends Seeder
         DB::table('projets')->insert([
 
             [
-                "image"=> "https://topdata.news/wp-content/uploads/2021/04/Bleach-Saison-17Sj5HtrX6X.jpg",
+                "image"=> "img/works/1.jpg",
                 "titre"=>"CHEF",
-                "description"=>"HTML"
+                "description"=>"HTML",
+                "filter"=>"Projet"
+            ],
+            [
+                "image"=> "img/works/2.jpg",
+                "titre"=>"IMAGELAYOUT",
+                "description"=>"CSS",
+                "filter"=>"Illustrator"
+            ],
+            [
+                "image"=> "img/works/3.jpg",
+                "titre"=>"JEUX",
+                "description"=>"JAVASCRIPT",
+                "filter"=>"Indesign"
+            ],
+            [
+                "image"=> "img/works/4.jpg",
+                "titre"=>"LARAVEL",
+                "description"=>"PHP",
+                "filter"=>"Exercices"
+            ],
+            [
+                "image"=> "img/works/5.jpg",
+                "titre"=>"REACT_PROJET",
+                "description"=>"REACT",
+                "filter"=>"Projet"
             ],
 
         ]);
