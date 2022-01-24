@@ -9,9 +9,10 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $afficheContact = Contact::all();
+        // $afficheContact = Contact::all();
         $paginationContact = Contact::orderBy("created_at","desc")->paginate(1);
-        return view("admin.contact.index",compact("afficheContact","paginationContact"));
+        return view("admin.contact.index",compact("paginationContact"));
+        // return view("admin.contact.index",compact("afficheContact","paginationContact"));
     }
     public function create()
     {

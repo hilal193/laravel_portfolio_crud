@@ -89,7 +89,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($afficheContact as $item)
+                        @forelse ($paginationContact as $item)
+                        {{-- @forelse ($afficheContact as $item) --}}
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->nom }}</td>
@@ -126,7 +127,7 @@
                     </tbody>
                 </table>
                 <div>
-                    {{ $paginationContact->links() }}
+                    {{ $paginationContact->links('pagination::bootstrap-4') }}
                 </div>
             </div>
 

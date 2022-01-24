@@ -90,7 +90,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($afficheAbout as $item)
+                        @forelse ($paginationAbout as $item)
+                        {{-- @forelse ($afficheAbout as $item) --}}
+
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->titre }}</td>
@@ -126,8 +128,8 @@
                         @endforelse
                     </tbody>
                 </table>
-                <div>
-                    {{ $paginationAbout->links() }}
+                <div class="justify-content-center">
+                    {{ $paginationAbout->links('pagination::bootstrap-4') }}
                 </div>
             </div>
 

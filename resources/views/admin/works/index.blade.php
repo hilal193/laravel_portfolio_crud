@@ -88,7 +88,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($afficheWorks as $item)
+                        @forelse ($paginationWorks as $item)
+                        {{-- @forelse ($afficheWorks as $item) --}}
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->titre }}</td>
@@ -125,7 +126,7 @@
                     </tbody>
                 </table>
                 <div>
-                    {{ $paginationWorks->links() }}
+                    {{ $paginationWorks->links('pagination::bootstrap-4') }}
                 </div>
             </div>
 

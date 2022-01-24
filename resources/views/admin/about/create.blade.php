@@ -3,7 +3,7 @@
 
 @section('content')
 
-@if ($errors)
+{{-- @if ($errors)
 
 @foreach ($errors->all() as $item)
 
@@ -13,13 +13,20 @@
 
 @endforeach
 
-@endif
+@endif --}}
+
+
 {{-- {{ $errors }} --}}
 <form class="m-5" action="{{ route("about.store") }}" method="POST">
     @csrf
     <div class="mb-3">
         <label class="form-label">Image</label>
         <input type="text" name="image" class="form-control">
+        <span>
+            @error("image")
+            {{ $message }}
+            @enderror
+        </span>
     </div>
     <div class="mb-3">
         <label  class="form-label">Titre</label>
