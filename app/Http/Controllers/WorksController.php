@@ -20,6 +20,14 @@ class WorksController extends Controller
     }
     public function store(Request $request)
     {
+
+        request()->validate([
+            "image"=>["required"],
+            "titre"=>["required"],
+            "description"=>["required"],
+            "filter"=>["required"]
+        ]);
+        
         $projet = new Projet();
         $projet->image = $request->image;
         $projet->titre = $request->titre;

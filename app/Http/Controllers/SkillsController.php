@@ -21,6 +21,10 @@ class SkillsController extends Controller
     }
     public function store(Request $request)
     {
+        request()->validate([
+            "nom"=>["required"],
+            "image"=>["required"]
+        ]);
         $skills = new Skill();
         $skills->nom = $request->nom;
         $skills->image = $request->image;
