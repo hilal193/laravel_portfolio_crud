@@ -9,9 +9,9 @@ class WorksController extends Controller
 {
     public function index()
     {
-        // $afficheWorks = Projet::all();
+        $afficheWorks = Projet::all();
         $paginationWorks = Projet::orderBy("created_at","desc")->paginate(2);
-        return view("admin.works.index",compact("paginationWorks"));
+        return view("admin.works.index",compact("paginationWorks","afficheWorks"));
         // return view("admin.works.index",compact("afficheWorks","paginationWorks"));
     }
     public function create()

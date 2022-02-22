@@ -91,7 +91,7 @@
                     </thead>
                     <tbody>
                         {{-- @forelse ($afficheSkills as $item) --}}
-                        @forelse ($paginationWorks as $item)
+                        @forelse ($paginationSkills as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->nom }}</td>

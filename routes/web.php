@@ -92,7 +92,7 @@ Route::post('/admin/contact/store', [ContactController::class,"store"])->name('c
 // affichage
 Route::get('/admin/contact/index', [ContactController::class,"index"])->name('contact.index');
 // Delete
-Route::delete('/contact/{id}/deletecontact', [ContactController::class,"destroy"])->name("contact.destroy");
+Route::delete('admin/contact/{id}/destroy', [ContactController::class,"destroy"])->name("contact.destroy");
 // show
 Route::get('/contact/{contact}/showscontact', [ContactController::class,"show"])->name("contact.show");
 // edit
