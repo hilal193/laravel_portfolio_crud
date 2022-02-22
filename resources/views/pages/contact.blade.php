@@ -84,29 +84,30 @@
                             <span class="bar-primary"></span>
                         </div>
 
-                        <form id="contact-form" class="row contact-form no-gutter" action="#" method="post">
+                        <form id="contact-form" class="row contact-form no-gutter" action="{{route("mailbox.store")}}" method="post">
+                        @csrf
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field name">
-                                    <span class="input-icon" id="name" ><i class="tf-profile-male"></i></span>
-                                    <input type="text" class="form-control"  placeholder="Enter your name">
+                                    <span class="input-icon" id="nom" ><i class="tf-profile-male"></i></span>
+                                    <input type="text" for="nom" class="form-control" name="nom" placeholder="Enter your name" required>
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field email">
                                     <span class= "input-icon" id="email"><i class="tf-envelope2"></i></span>
-                                    <input type="email" class="form-control" name="email" placeholder="Your email address">
+                                    <input type="email" for="email" class="form-control" name="email" placeholder="Your email address" required>
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-12">
                                 <div class="input-field">
-                                    <span class= "input-icon" id="subject"><i class="tf-pricetags"></i></span>
-                                    <input type="text" class="form-control" name="subject" placeholder="Enter the discussion title">
+                                    <span class= "input-icon" id="titre"><i class="tf-pricetags"></i></span>
+                                    <input type="text" for="titre" class="form-control" name="titre" placeholder="Enter the discussion title" required>
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-12">
                                 <div class="input-field message">
                                     <span class= "input-icon" ><i class="tf-pencil2"></i></span>
-                                    <textarea name="message" id="message" class="form-control" placeholder="Write your message"></textarea>
+                                    <textarea name="description"  id="desciption" class="form-control" placeholder="Write your message" required></textarea>
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-12">
