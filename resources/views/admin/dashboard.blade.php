@@ -1,7 +1,11 @@
 @extends("layouts.back")
 
 @section('content')
-<div class="sidebar-container mt-10 pt-10">
+
+
+@include("layouts.sidebar")
+
+{{-- <div class="sidebar-container mt-10 pt-10">
     <div class="sidebar-logo">
         Back Office
     </div>
@@ -9,12 +13,10 @@
         <li class="header">Create Formulaire</li>
         <li>
             <a href="{{route('works.create')}}">
-            {{-- <a href="#"> --}}
                 <i class="fa fa-home" aria-hidden="true"></i> Works -form
             </a>
         </li>
         <li>
-            {{-- <a href="{{route('portfolio.create')}}"> --}}
                 <a href="{{route('skills.create')}}">
 
 
@@ -31,19 +33,16 @@
             </a>
         </li>
         <li>
-            {{-- <a href="{{route('portfolio.affichage')}}"> --}}
             <a href="{{route('skills.index')}}">
                 <i class="fa fa-tachometer" aria-hidden="true"></i> Skills page
             </a>
         </li>
         <li>
-            {{-- <a href="{{route('portfolio.affichage')}}"> --}}
             <a href="{{route('about.index')}}">
                 <i class="fa fa-tachometer" aria-hidden="true"></i> About page
             </a>
         </li>
         <li>
-            {{-- <a href="{{route('portfolio.affichage')}}"> --}}
             <a href="{{route('contact.index')}}">
                 <i class="fa fa-tachometer" aria-hidden="true"></i> CONTACT page
             </a>
@@ -65,7 +64,7 @@
             </a>
         </li>
     </ul>
-</div>
+</div> --}}
 
 
 <div class="content-container">

@@ -1,7 +1,10 @@
 @extends("layouts.back")
 
 @section('content')
-    
+@include("layouts.sidebar")
+
+  <div class="content-container">
+
     <div class="row" id="table-head">
     <div class="col-12">
         <div class="card">
@@ -43,6 +46,8 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
+    </div>
+
 
 @endsection
