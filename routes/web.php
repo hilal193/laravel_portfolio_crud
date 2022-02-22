@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\WorksController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MailboxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,6 +100,28 @@ Route::get('/contact/{contact}/showscontact', [ContactController::class,"show"])
 Route::get('/contact/{contact}/edit', [ContactController::class,"edit"])->name("contact.edit");
 // update
 Route::put('/contact/{contact}/update', [ContactController::class,"update"])->name("contact.update");
+
+// mailbox
+// Route::resource("admin/mailbox", MailboxController::class);
+// create
+// Route::get('/admin/mailbox/create', [MailboxController::class,"create"])->name('mailbox.create');
+// // store
+// Route::post('/admin/mailbox/store', [MailboxController::class,"store"])->name('mailbox.store');
+// // affichage
+// Route::get('/admin/mailbox/index', [MailboxController::class,"index"])->name('mailbox.index');
+// // Delete
+// Route::delete('admin/mailbox/{id}/destroy', [MailboxController::class,"destroy"])->name("mailbox.destroy");
+// // show
+// Route::get('/mailbox/{mailbox}/showscontact', [MailboxController::class,"show"])->name("mailbox.show");
+// // edit
+// Route::get('/mailbox/{mailbox}/edit', [MailboxController::class,"edit"])->name("mailbox.edit");
+// // update
+// Route::put('/mailbox/{mailbox}/update', [MailboxController::class,"update"])->name("mailbox.update");
+
+
+Route::resource('admin/mailbox', MailboxController::class);
+
+
 
 
 

@@ -13,7 +13,7 @@ class CreateMailboxesTable extends Migration
      */
     public function up()
     {
-        Schema::create('_mailboxes', function (Blueprint $table) {
+        Schema::create('mailboxes', function (Blueprint $table) {
             $table->id();
             $table->string("nom");
             $table->string("email");

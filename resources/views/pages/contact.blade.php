@@ -79,12 +79,13 @@
                     </div>
                     <div class="col-xs-12 col-sm-7 col-md-7 col-md-offset-1 col-lg-offset-2">
                         <div class="section-title clear">
+                            @include("layouts.flash")
                             <h3>Send me a meesage</h3>
                             <span class="bar-dark"></span>
                             <span class="bar-primary"></span>
                         </div>
 
-                        <form id="contact-form" class="row contact-form no-gutter" action="{{route("mailbox.store")}}" method="post">
+                        <form action="{{route("mailbox.store")}}" method="post">
                         @csrf
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field name">
