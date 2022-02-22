@@ -2,9 +2,10 @@
 
 @section('content')
 
+@include("layouts.sidebar")
 
 
-<div class="sidebar-container mt-10 pt-10">
+{{-- <div class="sidebar-container mt-10 pt-10">
     <div class="sidebar-logo">
       Back Office
     </div>
@@ -30,13 +31,11 @@
         </li>
         <li>
             <a href="{{route('about.index')}}">
-                {{-- <a href="#"> --}}
               <i class="fa fa-tachometer" aria-hidden="true"></i> About
             </a>
         </li>
         <li>
             <a href="{{route('contact.index')}}">
-                {{-- <a href="#"> --}}
               <i class="fa fa-tachometer" aria-hidden="true"></i> Contact
             </a>
         </li>
@@ -63,7 +62,7 @@
         </li>
       </ul>
   </div>
-</div>
+</div> --}}
 
 
   <div class="content-container">

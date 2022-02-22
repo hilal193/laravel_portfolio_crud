@@ -23,8 +23,10 @@
         </div>
                                     <div class="col-9">
                                         <button type="button" class="btn w-100" data-bs-toggle="modal" data-bs-target="#show-{{ $item->id }}">
-                                                <p>Autheur sujet : {{ $item->titre }}</p>
-                                                <p>Description message :{{ $item->description }}</p>
+                                                <p>Nom : {{ $item->nom }}</p>
+                                                <p>Email : {{ $item->email }}</p>
+                                                <p>Titre : {{ $item->titre }}</p>
+                                                <p>Description; :{{ $item->description }}</p>
                                         </button>
                                     </div>
                                     <div class="col-2 d-flex align-items-center justify-content-center">
